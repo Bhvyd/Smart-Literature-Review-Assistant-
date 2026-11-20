@@ -1,0 +1,609 @@
+{
+  "collection_id": "96a1e1be1aec4a87ba961a406a84db6d",
+  "sections": {
+    "latency": {
+      "n_queries": 30,
+      "n_chunks": 3177,
+      "index_build_seconds": 0.88,
+      "query_embedding_ms": {
+        "p50": 29.1,
+        "p95": 36.7
+      },
+      "modes": {
+        "lexical": {
+          "n": 30,
+          "p50_ms": 9.31,
+          "p95_ms": 14.27,
+          "max_ms": 14.48,
+          "skipped_no_query_vector": 0
+        },
+        "tfidf": {
+          "n": 30,
+          "p50_ms": 8.16,
+          "p95_ms": 8.64,
+          "max_ms": 8.68,
+          "skipped_no_query_vector": 0
+        },
+        "dense": {
+          "n": 30,
+          "p50_ms": 130.24,
+          "p95_ms": 136.16,
+          "max_ms": 222.37,
+          "skipped_no_query_vector": 0
+        },
+        "hybrid": {
+          "n": 30,
+          "p50_ms": 134.57,
+          "p95_ms": 140.92,
+          "max_ms": 141.8,
+          "skipped_no_query_vector": 0
+        }
+      },
+      "note": "retrieval and paper ranking only; generation latency is measured separately because it depends on the provider",
+      "generated_at": "2026-11-17T23:39:21+00:00",
+      "previous": {
+        "n_queries": 30,
+        "n_chunks": 3222,
+        "index_build_seconds": 0.984,
+        "query_embedding_ms": {
+          "p50": 40.1,
+          "p95": 44.8
+        },
+        "modes": {
+          "lexical": {
+            "n": 30,
+            "p50_ms": 11.65,
+            "p95_ms": 16.52,
+            "max_ms": 16.86,
+            "skipped_no_query_vector": 0
+          },
+          "tfidf": {
+            "n": 30,
+            "p50_ms": 8.85,
+            "p95_ms": 11.13,
+            "max_ms": 11.64,
+            "skipped_no_query_vector": 0
+          },
+          "dense": {
+            "n": 30,
+            "p50_ms": 140.61,
+            "p95_ms": 150.24,
+            "max_ms": 246.02,
+            "skipped_no_query_vector": 0
+          },
+          "hybrid": {
+            "n": 30,
+            "p50_ms": 147.88,
+            "p95_ms": 184.69,
+            "max_ms": 189.88,
+            "skipped_no_query_vector": 0
+          }
+        },
+        "note": "retrieval and paper ranking only; generation latency is measured separately because it depends on the provider",
+        "generated_at": "2026-11-17T20:13:54+00:00"
+      }
+    },
+    "faiss": {
+      "n_queries": 30,
+      "k": 10,
+      "n_vectors": 3177,
+      "identical_top_k_order": "30/30",
+      "identical_top_k_set": "30/30",
+      "max_abs_score_difference": 2.5263667591257644e-07,
+      "hand_written_ms": {
+        "p50": 139.25,
+        "p95": 187.15
+      },
+      "faiss_ms": {
+        "p50": 0.567,
+        "p95": 0.647
+      },
+      "note": "score differences of ~1e-7 are float32-versus-float64 rounding; order can differ only between near-tied vectors",
+      "generated_at": "2026-11-17T23:39:34+00:00",
+      "previous": {
+        "n_queries": 30,
+        "k": 10,
+        "n_vectors": 3222,
+        "identical_top_k_order": "30/30",
+        "identical_top_k_set": "30/30",
+        "max_abs_score_difference": 2.455667474920986e-07,
+        "hand_written_ms": {
+          "p50": 179.64,
+          "p95": 188.12
+        },
+        "faiss_ms": {
+          "p50": 0.596,
+          "p95": 0.675
+        },
+        "note": "score differences of ~1e-7 are float32-versus-float64 rounding; order can differ only between near-tied vectors",
+        "generated_at": "2026-11-17T20:14:11+00:00"
+      }
+    },
+    "clustering": {
+      "vector_source": "title_abstract",
+      "n_papers": 100,
+      "n_clusters": 2,
+      "cluster_sizes": {
+        "-1": 21,
+        "0": 39,
+        "1": 40
+      },
+      "noise_fraction": 0.21,
+      "largest_cluster_share": 0.4,
+      "silhouette_cosine": 0.0837769035766537,
+      "caveat": "Silhouette is measured on the original embedding space but the clusters were found in a 10-D UMAP projection, which is not optimised for it, so low values are expected. With few clusters it mostly reflects one split; a largest-cluster share near 1 means the map found one topic, not sub-topics. Judge cluster quality by reading the labels.",
+      "generated_at": "2026-11-17T23:39:36+00:00",
+      "previous": {
+        "vector_source": "title_abstract",
+        "n_papers": 100,
+        "n_clusters": 2,
+        "cluster_sizes": {
+          "-1": 21,
+          "0": 39,
+          "1": 40
+        },
+        "noise_fraction": 0.21,
+        "largest_cluster_share": 0.4,
+        "silhouette_cosine": 0.0837769035766537,
+        "caveat": "Silhouette is measured on the original embedding space but the clusters were found in a 10-D UMAP projection, which is not optimised for it, so low values are expected. With few clusters it mostly reflects one split; a largest-cluster share near 1 means the map found one topic, not sub-topics. Judge cluster quality by reading the labels.",
+        "generated_at": "2026-11-17T20:14:24+00:00"
+      }
+    },
+    "graph": {
+      "edges_checked": 279,
+      "corroborated": 252,
+      "corroboration_rate": 0.903,
+      "internal_edges_checked": 5,
+      "internal_corroborated": 4,
+      "skipped_pdf_not_cached": 0,
+      "skipped_no_reference_section": 11,
+      "skipped_title_too_short": 10,
+      "sample_of": 300,
+      "unmatched_examples": [
+        {
+          "citing": "To Click or not to Click? The Role of Contextualized and User-Centric Web Snippe",
+          "cited": "The measurement of textual coherence with latent semantic analysis"
+        },
+        {
+          "citing": "Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation",
+          "cited": "REPLUG: Retrieval-Augmented Black-Box Language Models"
+        },
+        {
+          "citing": "CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG",
+          "cited": "M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embe"
+        },
+        {
+          "citing": "CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG",
+          "cited": "Demonstration of DB-GPT: Next Generation Data Interaction System Empowered by La"
+        },
+        {
+          "citing": "Tree-Augmented Cross-Modal Encoding for Complex-Query Video Retrieval",
+          "cited": "Iti-Certh Participation In Trecvid 2017"
+        },
+        {
+          "citing": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+          "cited": "Fairness Testing of Large Language Models in Role-Playing"
+        },
+        {
+          "citing": "Corpus-informed Retrieval Augmented Generation of Clarifying Questions",
+          "cited": "Quantifying Uncertainty in Answers from any Language Model and Enhancing their T"
+        },
+        {
+          "citing": "When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models",
+          "cited": "DRAGIN: Dynamic Retrieval Augmented Generation based on the Information Needs of"
+        },
+        {
+          "citing": "Retrieval Augmented Generation-Based Incident Resolution Recommendation System f",
+          "cited": "OpsEval: A Comprehensive Benchmark Suite for Evaluating Large Language Models\u2019 C"
+        },
+        {
+          "citing": "Enhancing Stock Market Information Retrieval with Retrieval-Augmented Generation",
+          "cited": "GPTs are GPTs: Labor market impact potential of LLMs"
+        }
+      ],
+      "note": "precision of OpenAlex edges against the PDFs' own reference lists; an unmatched edge may be a title formatted differently in the reference list, not a wrong edge",
+      "generated_at": "2026-11-17T23:39:42+00:00",
+      "previous": {
+        "edges_checked": 279,
+        "corroborated": 252,
+        "corroboration_rate": 0.903,
+        "internal_edges_checked": 5,
+        "internal_corroborated": 4,
+        "skipped_pdf_not_cached": 0,
+        "skipped_no_reference_section": 11,
+        "skipped_title_too_short": 10,
+        "sample_of": 300,
+        "unmatched_examples": [
+          {
+            "citing": "To Click or not to Click? The Role of Contextualized and User-Centric Web Snippe",
+            "cited": "The measurement of textual coherence with latent semantic analysis"
+          },
+          {
+            "citing": "Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation",
+            "cited": "REPLUG: Retrieval-Augmented Black-Box Language Models"
+          },
+          {
+            "citing": "CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG",
+            "cited": "M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embe"
+          },
+          {
+            "citing": "CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG",
+            "cited": "Demonstration of DB-GPT: Next Generation Data Interaction System Empowered by La"
+          },
+          {
+            "citing": "Tree-Augmented Cross-Modal Encoding for Complex-Query Video Retrieval",
+            "cited": "Iti-Certh Participation In Trecvid 2017"
+          },
+          {
+            "citing": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+            "cited": "Fairness Testing of Large Language Models in Role-Playing"
+          },
+          {
+            "citing": "Corpus-informed Retrieval Augmented Generation of Clarifying Questions",
+            "cited": "Quantifying Uncertainty in Answers from any Language Model and Enhancing their T"
+          },
+          {
+            "citing": "When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models",
+            "cited": "DRAGIN: Dynamic Retrieval Augmented Generation based on the Information Needs of"
+          },
+          {
+            "citing": "Retrieval Augmented Generation-Based Incident Resolution Recommendation System f",
+            "cited": "OpsEval: A Comprehensive Benchmark Suite for Evaluating Large Language Models\u2019 C"
+          },
+          {
+            "citing": "Enhancing Stock Market Information Retrieval with Retrieval-Augmented Generation",
+            "cited": "GPTs are GPTs: Labor market impact potential of LLMs"
+          }
+        ],
+        "note": "precision of OpenAlex edges against the PDFs' own reference lists; an unmatched edge may be a title formatted differently in the reference list, not a wrong edge",
+        "generated_at": "2026-11-17T20:14:29+00:00"
+      }
+    },
+    "retrieval": {
+      "judged_by": "THREE AI RATERS, majority vote - still NOT human. (1) a first pass by Claude from title + ~210 characters of abstract; (2) and (3) two independent Claude subagents (fresh context, instructed not to read the project or each other) that judged every candidate from the FULL abstract with the same rubric. Agreement over 294 query-candidate pairs (Cohen's kappa): first-pass vs A 0.787, first-pass vs B 0.79, A vs B 0.905; 54 pairs were unanimously relevant and 27 were disputed (decided by majority; listed per query under 'disputed'). Rubric: relevant if a researcher searching the query would want to read the paper because it substantially addresses the query topic; passing mentions do not count. Raters were all language models, so shared blind spots are possible. The first-pass labels are kept under 'relevant_first_pass_claude'. data/eval/REVIEW.md lists what a human should confirm.",
+      "n_judged_queries": 15,
+      "n_judged_with_no_relevant_paper": 1,
+      "n_unjudged_queries": 0,
+      "queries_per_mode": {
+        "lexical": 15,
+        "tfidf": 15,
+        "dense": 15,
+        "hybrid": 15
+      },
+      "skipped_dense_runs": 0,
+      "modes": {
+        "lexical": {
+          "p@5": 0.52,
+          "p@10": 0.3733,
+          "r@10": 0.8265,
+          "r@20": 0.8724,
+          "ndcg@10": 0.7549,
+          "mrr": 0.8229
+        },
+        "tfidf": {
+          "p@5": 0.4667,
+          "p@10": 0.3533,
+          "r@10": 0.7863,
+          "r@20": 0.8903,
+          "ndcg@10": 0.7156,
+          "mrr": 0.7778
+        },
+        "dense": {
+          "p@5": 0.4267,
+          "p@10": 0.28,
+          "r@10": 0.6341,
+          "r@20": 0.8787,
+          "ndcg@10": 0.5677,
+          "mrr": 0.6387
+        },
+        "hybrid": {
+          "p@5": 0.56,
+          "p@10": 0.3733,
+          "r@10": 0.8265,
+          "r@20": 0.9124,
+          "ndcg@10": 0.7819,
+          "mrr": 0.8356
+        }
+      },
+      "caveat": "Relevance is judged over the pooled top results of these same four modes, so a relevant paper none of them retrieved is invisible to every metric (pooling bias). Recall is therefore recall within the pool, not recall over the whole literature.",
+      "generated_at": "2026-11-17T23:39:53+00:00",
+      "previous": {
+        "judged_by": "THREE AI RATERS, majority vote - still NOT human. (1) a first pass by Claude from title + ~210 characters of abstract; (2) and (3) two independent Claude subagents (fresh context, instructed not to read the project or each other) that judged every candidate from the FULL abstract with the same rubric. Agreement over 294 query-candidate pairs (Cohen's kappa): first-pass vs A 0.787, first-pass vs B 0.79, A vs B 0.905; 54 pairs were unanimously relevant and 27 were disputed (decided by majority; listed per query under 'disputed'). Rubric: relevant if a researcher searching the query would want to read the paper because it substantially addresses the query topic; passing mentions do not count. Raters were all language models, so shared blind spots are possible. The first-pass labels are kept under 'relevant_first_pass_claude'. data/eval/REVIEW.md lists what a human should confirm.",
+        "n_judged_queries": 15,
+        "n_judged_with_no_relevant_paper": 1,
+        "n_unjudged_queries": 0,
+        "queries_per_mode": {
+          "lexical": 15,
+          "tfidf": 15,
+          "dense": 15,
+          "hybrid": 15
+        },
+        "skipped_dense_runs": 0,
+        "modes": {
+          "lexical": {
+            "p@5": 0.5067,
+            "p@10": 0.36,
+            "r@10": 0.7968,
+            "r@20": 0.8605,
+            "ndcg@10": 0.7314,
+            "mrr": 0.8217
+          },
+          "tfidf": {
+            "p@5": 0.4267,
+            "p@10": 0.34,
+            "r@10": 0.7489,
+            "r@20": 0.896,
+            "ndcg@10": 0.6955,
+            "mrr": 0.7944
+          },
+          "dense": {
+            "p@5": 0.3867,
+            "p@10": 0.3133,
+            "r@10": 0.6836,
+            "r@20": 0.8209,
+            "ndcg@10": 0.6042,
+            "mrr": 0.6567
+          },
+          "hybrid": {
+            "p@5": 0.52,
+            "p@10": 0.36,
+            "r@10": 0.7867,
+            "r@20": 0.9464,
+            "ndcg@10": 0.735,
+            "mrr": 0.78
+          }
+        },
+        "caveat": "Relevance is judged over the pooled top results of these same four modes, so a relevant paper none of them retrieved is invisible to every metric (pooling bias). Recall is therefore recall within the pool, not recall over the whole literature.",
+        "generated_at": "2026-11-17T20:56:48+00:00"
+      }
+    },
+    "tau": {
+      "mode": "dense",
+      "n_questions": 40,
+      "suggested": {
+        "tau": 0.7560846444869362,
+        "f1": 0.923076923076923,
+        "precision": 0.8571428571428571,
+        "recall": 1.0
+      },
+      "set_in_env": "REFUSAL_TAU=0.7560846444869362 REFUSAL_TAU_MODE=dense",
+      "note": "RRF scores are rank-based (a question whose BM25 and dense top results coincide scores exactly 2/61 however weak the match), so calibrate on dense cosine or BM25",
+      "generated_at": "2026-11-17T23:40:19+00:00",
+      "previous": {
+        "mode": "dense",
+        "n_questions": 40,
+        "suggested": {
+          "tau": 0.7779114486227152,
+          "f1": 0.9090909090909091,
+          "precision": 1.0,
+          "recall": 0.8333333333333334
+        },
+        "set_in_env": "REFUSAL_TAU=0.7779114486227152 REFUSAL_TAU_MODE=dense",
+        "note": "RRF scores are rank-based (a question whose BM25 and dense top results coincide scores exactly 2/61 however weak the match), so calibrate on dense cosine or BM25",
+        "generated_at": "2026-11-17T20:21:17+00:00"
+      }
+    },
+    "refusal_end_to_end": {
+      "judged_by": "Claude (AI), PROVISIONAL - labels in data/eval/questions.json (not a human judgement)",
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite",
+      "n_questions": 40,
+      "unanswerable_refused": "14/16",
+      "answerable_wrongly_refused": "0/24",
+      "accuracy_as_labelled": 0.95,
+      "unanswerable_that_were_answered": [
+        "How does reinforcement learning from human feedback train a reward model?",
+        "How do transformers implement multi-head self-attention?"
+      ],
+      "reading_of_those": "Both answers were grounded in real passages and, after a scope rule was added to the prompt, are explicitly attributed to the specific paper's setting ('In the context of the ... paper', 'RLHF for RAG systems'). The labels 'unanswerable' are debatable for them: the collection does contain text on both topics, in a narrower setting.",
+      "mean_citation_coverage_when_answered": 1.0,
+      "score_threshold_alone": {
+        "best_dense_cosine_tau": 0.7779,
+        "f1": 0.909,
+        "precision": 1.0,
+        "recall": 0.833,
+        "would_falsely_refuse_answerable": "4/24",
+        "would_catch_unanswerable": "16/16"
+      },
+      "decision": "REFUSAL_TAU stays unset: the model's own INSUFFICIENT_CONTEXT refusal (plus 'no retrieval hits' and 'no valid citation') is the active mechanism; a score threshold would falsely refuse answerable questions for little gain",
+      "generated_at": "2026-11-17T20:57:05+00:00"
+    },
+    "retrieval_bootstrap": {
+      "n_queries_with_a_relevant_paper": 14,
+      "n_judged_queries": 15,
+      "mrr_scope": "MRR here is over the 14 queries with a relevant paper; the 'retrieval' section's MRR counts all 15 judged queries (a query with no relevant paper scores 0), so the two differ",
+      "method": "paired bootstrap over queries, 5000 resamples, 95% percentile interval of the mean difference; Wilcoxon signed-rank p-value alongside (scipy, two-sided)",
+      "resamples": 5000,
+      "seed": 0,
+      "judged_by": "THREE AI RATERS, majority vote - still NOT human. (1) a first pass by Claude from title + ~210 characters of abstract; (2) and (3) two independent Claude subagents (fresh context, instructed not to read the project or each other) that judged every candidate from the FULL abstract with the same rubric. Agreement over 294 query-candidate pairs (Cohen's kappa): first-pass vs A 0.787, first-pass vs B 0.79, A vs B 0.905; 54 pairs were unanimously relevant and 27 were disputed (decided by majority; listed per query under 'disputed'). Rubric: relevant if a researcher searching the query would want to read the paper because it substantially addresses the query topic; passing mentions do not count. Raters were all language models, so shared blind spots are possible. The first-pass labels are kept under 'relevant_first_pass_claude'. data/eval/REVIEW.md lists what a human should confirm.",
+      "comparisons": {
+        "hybrid - dense (ndcg)": {
+          "mean_diff": 0.2142,
+          "ci95": [
+            0.1073,
+            0.3326
+          ],
+          "excludes_zero": true,
+          "wilcoxon_p_two_sided": 0.0037
+        },
+        "hybrid - dense (mrr)": {
+          "mean_diff": 0.2109,
+          "ci95": [
+            0.066,
+            0.3765
+          ],
+          "excludes_zero": true,
+          "wilcoxon_p_two_sided": 0.0273
+        },
+        "hybrid - lexical (ndcg)": {
+          "mean_diff": 0.027,
+          "ci95": [
+            -0.039,
+            0.0857
+          ],
+          "excludes_zero": false,
+          "wilcoxon_p_two_sided": 0.173
+        },
+        "hybrid - lexical (mrr)": {
+          "mean_diff": 0.0136,
+          "ci95": [
+            0.0,
+            0.0408
+          ],
+          "excludes_zero": false,
+          "wilcoxon_p_two_sided": 0.3173
+        },
+        "lexical - dense (ndcg)": {
+          "mean_diff": 0.1872,
+          "ci95": [
+            0.0739,
+            0.3118
+          ],
+          "excludes_zero": true,
+          "wilcoxon_p_two_sided": 0.0085
+        },
+        "lexical - dense (mrr)": {
+          "mean_diff": 0.1973,
+          "ci95": [
+            0.0486,
+            0.3687
+          ],
+          "excludes_zero": true,
+          "wilcoxon_p_two_sided": 0.0458
+        }
+      },
+      "caveat": "Descriptive, not a hypothesis test: 6 comparisons are made with no multiple-comparison correction, on only 14 queries, where a percentile bootstrap can undercover (intervals may be too narrow), so 'excludes_zero' is a description of the interval, not significance. The candidate pool the labels were built on comes from these same retrieval modes, and the labels are provisional (not human). An interval that includes zero means 'not distinguishable here', not 'equal'.",
+      "generated_at": "2026-11-17T23:40:05+00:00",
+      "previous": {
+        "n_queries_with_a_relevant_paper": 14,
+        "method": "paired bootstrap over queries, 5000 resamples, 95% interval of the mean difference",
+        "comparisons": {
+          "hybrid - dense (ndcg)": {
+            "mean_diff": 0.1308,
+            "ci95": [
+              0.0371,
+              0.2331
+            ],
+            "excludes_zero": true
+          },
+          "hybrid - dense (mrr)": {
+            "mean_diff": 0.1321,
+            "ci95": [
+              -0.0661,
+              0.3202
+            ],
+            "excludes_zero": false
+          },
+          "hybrid - lexical (ndcg)": {
+            "mean_diff": 0.0036,
+            "ci95": [
+              -0.0809,
+              0.0751
+            ],
+            "excludes_zero": false
+          },
+          "hybrid - lexical (mrr)": {
+            "mean_diff": -0.0446,
+            "ci95": [
+              -0.1518,
+              0.0536
+            ],
+            "excludes_zero": false
+          },
+          "lexical - dense (ndcg)": {
+            "mean_diff": 0.1272,
+            "ci95": [
+              0.0206,
+              0.2524
+            ],
+            "excludes_zero": true
+          },
+          "lexical - dense (mrr)": {
+            "mean_diff": 0.1767,
+            "ci95": [
+              0.0451,
+              0.3327
+            ],
+            "excludes_zero": true
+          }
+        },
+        "generated_at": "2026-11-17T20:57:04+00:00"
+      }
+    },
+    "summary_rouge": {
+      "n": 20,
+      "rougeL_f1_mean": 0.3227,
+      "generated_at": "2026-11-17T20:55:26+00:00"
+    },
+    "cost_per_query": {
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite",
+      "measured_on": "uncached live calls only (cached repeats cost nothing and are not counted)",
+      "per_answered_question": {
+        "calls": 12,
+        "prompt_tokens_mean": 1981,
+        "output_tokens_mean": 165,
+        "thinking_tokens_mean": 0,
+        "latency_ms_p50": 2186,
+        "latency_ms_max": 2889,
+        "prompt_tokens_total": 23769,
+        "output_tokens_total": 1977
+      },
+      "per_summary": {
+        "calls": 20,
+        "prompt_tokens_mean": 915,
+        "output_tokens_mean": 85,
+        "thinking_tokens_mean": 0,
+        "latency_ms_p50": 1977,
+        "latency_ms_max": 32850,
+        "prompt_tokens_total": 18305,
+        "output_tokens_total": 1698
+      },
+      "questions_run": 12,
+      "refused": 0,
+      "note": "tokens are as reported by the provider (usageMetadata); no price is applied here because the free tier is $0 and a paid price must be read from the provider's current price list",
+      "generated_at": "2026-11-17T20:58:00+00:00",
+      "price_used_usd_per_million_tokens": {
+        "input": 0.25,
+        "output_including_thinking": 1.5,
+        "source": "https://aistudio.google.com/docs/pricing (Gemini 3.1 Flash-Lite, Standard tier), read 2026-11-18 through a summarising fetch - confirm before budgeting; the free tier is $0"
+      },
+      "usd_per_answered_question_if_billed": 0.000743,
+      "usd_per_summary_if_billed": 0.000356,
+      "usd_per_1000_answered_questions_if_billed": 0.743
+    },
+    "faithfulness": {
+      "n_judged": 40,
+      "unsupported": 2,
+      "unsupported_rate": 0.05,
+      "unsupported_rate_ci95_wilson": [
+        0.014,
+        0.165
+      ],
+      "bounds": {
+        "both_raters_flag": 1,
+        "any_rater_flags": 3
+      },
+      "per_rater_unsupported": {
+        "A": 1,
+        "B": 3
+      },
+      "unsupported_claims": [
+        {
+          "claim_no": 16,
+          "sentence": "Iterative retrieval assists multi-hop question answering by generating intermediate reasoning steps that help address complex questions [2][3].",
+          "why": "Intermediate reasoning steps are LLM CoT, not stated as what iterative retrieval does."
+        },
+        {
+          "claim_no": 21,
+          "sentence": "Iterative retrieval helps multi-hop question answering by generating intermediate reasoning steps, which allows the model to leverage external data sources to compensate for missing internal knowledge or erroneous retrieval [2].",
+          "why": "Passage attributes reasoning steps to CoT, not iterative retrieval; notes iterative retrieval error accumulation."
+        }
+      ],
+      "judged_by": "two independent Claude subagents against the FULL cited passage (strict: every material part must be in the passage); the 2 disagreements were broken by Claude reading the passages. AI judgement, NOT human.",
+      "sample": "40 cited answer sentences drawn with a fixed seed (7) from the 52 stored non-refused answers of this collection",
+      "reading": "the failure mode is a sentence that attributes to retrieval something the passage credits to another mechanism (chain-of-thought) - the citation is real, the causal link is the model's gloss",
+      "generated_at": "2026-11-17T20:59:04+00:00"
+    }
+  }
+}

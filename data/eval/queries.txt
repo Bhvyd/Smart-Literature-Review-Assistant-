@@ -1,0 +1,15 @@
+how does retrieval augmentation reduce hallucination
+evaluating retrieval augmented generation systems
+chunking strategies for documents
+hybrid sparse and dense retrieval
+multi-hop reasoning with retrieval
+multimodal retrieval augmented generation
+security and poisoning attacks on retrieval augmented generation
+citations and attribution in generated answers
+domain specific retrieval augmented generation for healthcare
+reranking retrieved passages
+knowledge graph retrieval augmented generation
+when should a model decide to retrieve
+query rewriting for retrieval
+long context language models versus retrieval
+conversational search with retrieval

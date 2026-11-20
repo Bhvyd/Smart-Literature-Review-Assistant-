@@ -1,0 +1,209 @@
+{
+ "judged_by": "THREE AI RATERS, majority vote - NOT human. 'answerable' means at least one abstract in the 100-paper collection addresses the question. Claude's first pass and two independent Claude subagents (full title+abstract of all 100 papers, questions shuffled) agreed on all 40 (kappa {'me-A': 1.0, 'me-B': 1.0, 'A-B': 1.0}). Caveat: the definition is abstract-level while the system answers from full text, so two questions labelled unanswerable are answerable in a narrower setting from full text ('borderline'); they are NOT relabelled, and the refusal numbers report them as unanswerable. Review before presenting.",
+ "collection_topic": "retrieval augmented generation",
+ "questions": [
+  {
+   "question": "How can a RAG system decide when to retrieve during generation?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What chunking strategies work best for retrieval-augmented generation?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How can RAG pipelines be evaluated automatically without human annotations?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What attacks target retrieval-augmented generation systems?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How do multimodal RAG systems use images and video?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How can knowledge graphs improve retrieval-augmented generation?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How does hybrid retrieval combine BM25 with dense vectors in RAG?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How can RAG systems cite the sources of their answers?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How is retrieval-augmented generation applied to healthcare documents?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How does iterative retrieval help multi-hop question answering?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How can the cost or latency of RAG systems be reduced?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "Why do large reasoning models need adaptive retrieval?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What is query routing in retrieval-augmented generation?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How do clarifying questions help conversational search?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How can RAG be used to generate educational questions?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What challenges do companies face when deploying RAG in industry?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "Can retrieval-augmented generation automate literature reviews?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What does the TREC RAG track evaluate?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How does retrieval augmentation help code generation?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How can uncertainty be quantified in multimodal RAG?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What is parametric retrieval-augmented generation?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How is RAG used for music question answering?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How does cross-lingual dense retrieval work?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How robust are dense retrievers to misspelled queries?",
+   "answerable": true,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What is the boiling point of water at sea level?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "Who won the 2022 FIFA World Cup?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How do I bake sourdough bread at home?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What is the capital city of Australia?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How does CRISPR gene editing work?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "Explain the proof of Fermat's Last Theorem.",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What is the architecture of AlphaFold for protein structure prediction?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How do diffusion models sample images with a denoising schedule?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What are the income tax rules for freelancers in Germany?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How do quantum error-correcting codes protect qubits?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What is the plot of the movie Inception?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How does reinforcement learning from human feedback train a reward model?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true,
+   "borderline": "the abstracts do not cover it, but the full text of one paper (RAG-Reward) describes reward modelling for RAG; the system answers it scoped to that setting"
+  },
+  {
+   "question": "Which GPUs are best for training large language models?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How does BERT pre-training with masked language modelling work?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "What is the climate impact of data centres?",
+   "answerable": false,
+   "answerable_by_abstracts_all_three_raters_agree": true
+  },
+  {
+   "question": "How do transformers implement multi-head self-attention?",
+   "answerable": false,
+   "note": "Labelled unanswerable BEFORE running the system. On inspection the system answered it with 2 citations to real passages in the collection that describe multi-head attention, so this label was wrong. Left as originally written so results are not fitted to labels; the corrected score is reported separately.",
+   "answerable_by_abstracts_all_three_raters_agree": true,
+   "borderline": "the abstracts do not cover it, but the full text of a video-retrieval paper describes multi-head attention in its model; the system answers it scoped to that paper"
+  }
+ ]
+}
